@@ -4,6 +4,8 @@ import os
 import pandas as pd
 import numpy as np
 import Exceptions
+from Data import Data
+from Control import Control
 
 # https://www.pythontutorial.net/tkinter/
 
@@ -11,62 +13,6 @@ import Exceptions
 # root.columnconfigure(0, weight=1) # column 0 has size 1
 # root.columnconfigure(1, weight=3) # column 1 is 3x the size of col 0
 # padding=(left, top, right, bottom)
-
-
-class Data:
-
-    def __init__(self):
-        # pep_totaal = pd.read_csv()
-        # TODO
-        pass
-
-    def get_zm_id(self, pep_id, visit):
-        # TODO
-        return pep_id + '--zm_id' + '--visit_1'
-
-    def get_qu_id(self, pep_id):
-        # TODO
-        return pep_id + '--qu_id'
-
-    def get_pep_id(self, pseudo):
-        # return pepDictPseudonym[pseudo]
-        return 'HB' + str(np.random.randint(1111111, 9999999))
-
-
-class Control:
-    def __init__(self):
-        """ Handle any file reading/writing,
-            storing of variables, etc.
-        """
-        self._pep_id = None
-        self._zm_id = None
-        self._qu_id = None
-        self._ldot = None
-        self._visit = None
-
-        self.data = Data()
-
-    def update_visit(self, value):
-        if not str(value) in {'1', '2', '3'}:
-            raise Exceptions.BadVisitId('Visit input is invalid')
-        self._visit = value
-
-    def update(self, value, variable):
-        if variable == 'pep':
-            self._pep_id = value
-            if self._visit:
-                self._zm_id = self.data.get_zm_id(self._pep_id, self._visit)
-                self._qu_id = self.data.get_qu_id(self._pep_id)
-        elif variable == 'zm':
-            self._zm_id = value
-            if self._visit:
-                self._pep_id = self.data.get_pep_id(value)
-                self._qu_id = self.data.get_qu_id(self._pep_id)
-        elif variable == 'qu':
-            self._qu_id = value
-            if self._visit:
-                self._pep_id = self.data.get_pep_id(value)
-                self._zm_id = self.data.get_zm_id(self._pep_id, self._visit)
 
 
 class App(tk.Tk):
