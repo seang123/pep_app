@@ -1,36 +1,51 @@
 from Data import Data
+import pandas as pd
+import os
 
 class Control:
     def __init__(self):
         """ Handle any file reading/writing,
             storing of variables, etc.
         """
-        self._pep_id = None
-        self._zm_id = None
-        self._qu_id = None
-        self._ldot = None
-        self._visit = None
 
         self.data = Data()
 
     def update_visit(self, value):
-        if not str(value) in {'1', '2', '3'}:
-            raise Exceptions.BadVisitId('Visit input is invalid')
-        self._visit = value
+        self.data.update_visit(value)
 
     def update(self, value, variable):
+        """
+        If a pseudo is changed, first update the PEP id to reflect this change, then update all pseudos
+        :param value:
+        :param variable:
+        :return:
+        """
         if variable == 'pep':
-            self._pep_id = value
-            if self._visit:
-                self._zm_id = self.data.get_zm_id(self._pep_id, self._visit)
-                self._qu_id = self.data.get_qu_id(self._pep_id)
+            self.data._pep_id = value
+            if self.data._visit:
+                self.data.update_zm_id()
+                self.data.update_qu_id()
+                self.data.update_ap_id()
+                self.data.update_em_id()
         elif variable == 'zm':
-            self._zm_id = value
-            if self._visit:
-                self._pep_id = self.data.get_pep_id(value)
-                self._qu_id = self.data.get_qu_id(self._pep_id)
+            self.data._zm_id = value
+            self.data.update_visit(value[2])
+            self.data.update_pep_id(value)
+            if self.data._visit:
+                self.data.update_qu_id()
+                self.data.update_ap_id()
+                self.data.update_em_id()
         elif variable == 'qu':
-            self._qu_id = value
-            if self._visit:
-                self._pep_id = self.data.get_pep_id(value)
-                self._zm_id = self.data.get_zm_id(self._pep_id, self._visit)
+            self.data._qu_id = value
+            self.data.update_pep_id(value)
+            if self.data._visit:
+                self.data.update_zm_id()
+                self.data.update_ap_id()
+                self.data.update_em_id()
+        elif variable == 'ldot':
+            self.data.pep_from_ldot(value)
+            if self.data._visit:
+                self.data.update_qu_id()
+                self.data.update_zm_id()
+                self.data.update_ap_id()
+                self.data.update_em_id()

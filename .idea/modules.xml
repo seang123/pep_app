@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/pep_app.iml" filepath="$PROJECT_DIR$/.idea/pep_app.iml" />
+      <module fileurl="file://M:/HBS_work/scripts/.idea/scripts.iml" filepath="M:/HBS_work/scripts/.idea/scripts.iml" />
+    </modules>
+  </component>
+</project>
