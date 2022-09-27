@@ -26,7 +26,9 @@ class App(tk.Tk):
         self.frame_left = ttk.Frame(self)
         self.frame_left.grid(column=0, row=1)
         self.frame_right = ttk.Frame(self)
-        self.frame_right.grid(column=1, row=1)
+        self.frame_right.grid(column=1, row=1, padx=(10,0))
+        self.frame_right_2 = ttk.Frame(self)
+        self.frame_right_2.grid(column=2, row=1, padx=(10,0))
 
         self.create_labels()
 
@@ -155,6 +157,15 @@ class App(tk.Tk):
         self.frame_templates.em_template.set(f"sub-{em_id}_pre_{visit}_wrb_emp_01.zip")
         self.frame_templates.zm_template.set(f"sub-{zm_id}_pre_{visit}_wrb_zm_1.zip")
 
+    def open_participant_folder(self):
+        os.startfile(f'S:\hbs\sub-{self.controller.data._pep_id}')
+
+    def _create_util_buttons(self):
+
+        # Open participant folder button
+        #ttk.Button(self.frame_right_2, text='Open', command = self.open_participant_folder).grid(column=0, row=0, sticky=tk.E)
+        ttk.Button(self.frame_right_2, text='Open', command = self.open_participant_folder).pack(side = tk.RIGHT)
+
 
     def create_labels(self):
         """ Create the GUI """
@@ -170,6 +181,7 @@ class App(tk.Tk):
         self._create_visit_entry()
         self._create_ldot_entry()
         self._create_file_name_templates()
+        self._create_util_buttons()
 
 
 if __name__ == '__main__':
