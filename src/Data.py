@@ -44,12 +44,11 @@ class Data:
         cmd = 'echo ' + txt.strip() + '|clip'
         return subprocess.check_call(cmd, shell=True)
 
-    def pep_to_ldot(self, pepid):
+    def pep_to_ldot(self, pepID):
         """ For a given PEP-id return the matching Ldot """
         val = self.pep_ldot['REGISTRATION_ID'].loc[self.pep_ldot['PEP_ID'] == pepID].values[0]
-        if val == '': raise Exception(f'No Ldot availabel for pepID: {pepid}')
+        if val == '': raise Exception(f'No Ldot availabel for pepID: {pepID}')
         return val
-
 
     def pep_from_ldot(self, key):
         """ Get HBS PEP key from ldot """
@@ -104,3 +103,7 @@ class Data:
             if f"{self._visit}EM" in i:
                 self._em_id = i
                 return i
+
+    def update_ldot(self):
+        self._ldot = self.pep_to_ldot(self._pep_id)
+

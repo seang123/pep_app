@@ -22,6 +22,7 @@ class Control:
         """
         if variable == 'pep':
             self.data._pep_id = value
+            self.data.update_ldot()
             if self.data._visit:
                 self.data.update_zm_id()
                 self.data.update_qu_id()
@@ -31,6 +32,7 @@ class Control:
             self.data._zm_id = value
             self.data.update_visit(value[2])
             self.data.update_pep_id(value)
+            self.data.update_ldot()
             if self.data._visit:
                 self.data.update_qu_id()
                 self.data.update_ap_id()
@@ -38,11 +40,13 @@ class Control:
         elif variable == 'qu':
             self.data._qu_id = value
             self.data.update_pep_id(value)
+            self.data.update_ldot()
             if self.data._visit:
                 self.data.update_zm_id()
                 self.data.update_ap_id()
                 self.data.update_em_id()
         elif variable == 'ldot':
+            self.data._ldot = value
             self.data.pep_from_ldot(value)
             if self.data._visit:
                 self.data.update_qu_id()
