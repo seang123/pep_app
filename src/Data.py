@@ -13,6 +13,11 @@ class Data:
         self.pep_ldot = pd.read_excel('S:\code\ldot_exports\pep_ldot_koppeltabel.xlsx', sheet_name='1004', index_col=None)   #   - actual - but currently have S-drive acces issues
         self.pepDictMain, self.pepDictPseudonyms = self.create_pep_dict()
 
+        self.emails_df = pd.read_excel(
+            'Z:\cns\HealthyBrainStudy\Data Management\ActivPAL, ZMax, Empatica\Empatica\Accounts\Empatica accounts.xlsx',
+            sheet_name = 'Blad1',
+            index_col = None)
+
         self._pep_id = None
         self._zm_id = None
         self._ap_id = None
@@ -20,6 +25,8 @@ class Data:
         self._qu_id = None
         self._ldot = None
         self._visit = '1'
+        self._email = None
+        self._password = None
 
     def create_pep_dict(self):
         """ Create map{pep-id -> pseudos} and map{pseudo -> pep-id} """
@@ -106,4 +113,22 @@ class Data:
 
     def update_ldot(self):
         self._ldot = self.pep_to_ldot(self._pep_id)
+
+    def update_email(self):
+        try:
+            emails = self.emails_df.iloc[:, 0].values
+            passwords = self.emails_df.iloc[:,4].values
+            ldots = self.emails_df.iloc[:,3].values
+            idx = np.where(ldots == int(self._ldot))[0][-1]
+            print(idx)
+            email = emails[idx]
+            password = passwords[idx]
+            print(email, password)
+            self._email = email
+            self._password = password
+        except Exception as e:
+            print('Failed to retrieve/set email')
+            print(e)
+            self._email = None
+            self._password = None
 

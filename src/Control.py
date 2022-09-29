@@ -53,3 +53,5 @@ class Control:
                 self.data.update_zm_id()
                 self.data.update_ap_id()
                 self.data.update_em_id()
+
+        self.data.update_email()

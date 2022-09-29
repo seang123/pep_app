@@ -6,6 +6,8 @@ import numpy as np
 import Exceptions
 from Data import Data
 from Control import Control
+from Utils import zip_files
+import subprocess
 
 # https://www.pythontutorial.net/tkinter/
 
@@ -42,6 +44,7 @@ class App(tk.Tk):
             print(k, '--', self.controller.data.__dict__[k])
             v.set(self.controller.data.__dict__[k])
         self.update_template_labels()
+        self.update_email_label()
 
     def process(self, widget, name):
         """ Update the variables using the given widgets input value
@@ -164,7 +167,36 @@ class App(tk.Tk):
 
         # Open participant folder button
         #ttk.Button(self.frame_right_2, text='Open', command = self.open_participant_folder).grid(column=0, row=0, sticky=tk.E)
-        ttk.Button(self.frame_right_2, text='Open', command = self.open_participant_folder).pack(side = tk.RIGHT)
+        ttk.Button(self.frame_right_2, text='Open', command = self.open_participant_folder).grid(column=0, row=0, sticky=tk.W)#.pack(side = tk.RIGHT)
+
+    def _create_email_label(self):
+        self.frame_email = ttk.LabelFrame(self, text='Email')
+        self.frame_email.grid(column = 0, row=4, padx=(5, 5), pady=(20,0))
+
+        self.frame_email.email_template = tk.StringVar(value="dertigersbrein_00@donders.ru.nl")
+        ttk.Entry(self.frame_email, textvariable = self.frame_email.email_template, state='readonly', width=50).grid(
+            column=0, row=0, sticky=tk.W,
+            padx=(5,5), pady=(5,5))
+
+        self.frame_email.password_template = tk.StringVar(value="hbs2031")
+        ttk.Entry(self.frame_email, textvariable = self.frame_email.password_template, state='readonly', width=50).grid(
+            column=0, row=1, sticky=tk.W,
+            padx=(5,5), pady=(5,5))
+
+    def update_email_label(self):
+        email = str(self.controller.data._email)
+        password = str(self.controller.data._password)
+        self.frame_email.email_template.set(email)
+        self.frame_email.password_template.set(password)
+
+    def zip_files(self):
+        #path = 'C:\\Users\\seagie\\Desktop\\ZMax_temporary_automate'
+        #zip_files.main(str(self.controller.data._zm_id), str(self.controller.data._visit), path)
+        zm_id = self.controller.data._zm_id
+        visit = self.controller.data._visit
+        subprocess.Popen(['cd', 'C:\\Users\\seagie\\Desktop\\ZMax_temporary', '&&', 'zip_files.py', '--zm_id', str(zm_id), '--lab_visit', str(visit)], shell=True)
+    def _create_zip_button(self):
+        ttk.Button(self.frame_right_2, text='Zip ZMax', command = self.zip_files).grid(column=0, row=1, sticky=tk.W)
 
 
     def create_labels(self):
@@ -182,6 +214,8 @@ class App(tk.Tk):
         self._create_ldot_entry()
         self._create_file_name_templates()
         self._create_util_buttons()
+        self._create_email_label()
+        self._create_zip_button()
 
 
 if __name__ == '__main__':
