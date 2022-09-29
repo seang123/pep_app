@@ -120,12 +120,8 @@ class Data:
             passwords = self.emails_df.iloc[:,4].values
             ldots = self.emails_df.iloc[:,3].values
             idx = np.where(ldots == int(self._ldot))[0][-1]
-            print(idx)
-            email = emails[idx]
-            password = passwords[idx]
-            print(email, password)
-            self._email = email
-            self._password = password
+            self._email = emails[idx]
+            self._password = passwords[idx]
         except Exception as e:
             print('Failed to retrieve/set email')
             print(e)

@@ -21,10 +21,17 @@ class App(tk.Tk):
     def __init__(self):
         super().__init__()
 
+        self.title('PEP id\'s')
+        self.geometry('600x400+50+50')  # width*height+x+y
+        print(self.winfo_screenwidth())
+
+        # Data handler
         self.controller = Control()
 
+        # hold the text variables in the entry fields for update TODO: update this
         self.text_variables = {}
 
+        # Init frames
         self.frame_left = ttk.Frame(self)
         self.frame_left.grid(column=0, row=1)
         self.frame_right = ttk.Frame(self)
@@ -32,10 +39,8 @@ class App(tk.Tk):
         self.frame_right_2 = ttk.Frame(self)
         self.frame_right_2.grid(column=2, row=1, padx=(10,0))
 
+        # Create widgets
         self.create_labels()
-
-    def run(self):
-        self.mainloop()
 
     def update_all(self):
         """ When an Entry is made, update all fields to match the new entry """
@@ -201,9 +206,6 @@ class App(tk.Tk):
 
     def create_labels(self):
         """ Create the GUI """
-        self.title('PEP id\'s')
-        self.geometry('600x400+50+50')  # width*height+x+y
-        print(self.winfo_screenwidth())
 
         self._create_pep_entry()
         self._create_zm_entry()
