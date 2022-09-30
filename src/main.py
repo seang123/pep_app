@@ -8,6 +8,7 @@ from Data import Data
 from Control import Control
 from Utils import zip_files
 import subprocess
+from Frames import Buttons
 
 # https://www.pythontutorial.net/tkinter/
 
@@ -36,8 +37,12 @@ class App(tk.Tk):
         self.frame_left.grid(column=0, row=1)
         self.frame_right = ttk.Frame(self)
         self.frame_right.grid(column=1, row=1, padx=(10,0))
-        self.frame_right_2 = ttk.Frame(self)
-        self.frame_right_2.grid(column=2, row=1, padx=(10,0))
+        #self.frame_right_2 = ttk.Frame(self)
+        #self.frame_right_2.grid(column=2, row=1, padx=(10,0))
+
+        button_frame = Buttons.ButtonFrame(self)
+        button_frame.grid(column=2, row=1, padx=(10,10))
+
 
         # Create widgets
         self.create_labels()
@@ -215,9 +220,9 @@ class App(tk.Tk):
         self._create_visit_entry()
         self._create_ldot_entry()
         self._create_file_name_templates()
-        self._create_util_buttons()
+        #self._create_util_buttons()
         self._create_email_label()
-        self._create_zip_button()
+        #self._create_zip_button()
 
 
 if __name__ == '__main__':

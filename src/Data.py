@@ -14,7 +14,7 @@ class Data:
         self.pepDictMain, self.pepDictPseudonyms = self.create_pep_dict()
 
         self.emails_df = pd.read_excel(
-            'Z:\cns\HealthyBrainStudy\Data Management\ActivPAL, ZMax, Empatica\Empatica\Accounts\Empatica accounts.xlsx',
+            r'Z:\cns\HealthyBrainStudy\Data Management\ActivPAL, ZMax, Empatica\Empatica\Accounts\Empatica accounts.xlsx',
             sheet_name = 'Blad1',
             index_col = None)
 
