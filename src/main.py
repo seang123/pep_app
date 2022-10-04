@@ -29,7 +29,7 @@ class App(tk.Tk):
         # Data handler
         self.controller = Control()
 
-        # hold the text variables in the entry fields for update TODO: update this
+        # hold the text variables in the entry fields for update TODO: refactor this
         self.text_variables = {}
 
         # Init frames
@@ -164,6 +164,7 @@ class App(tk.Tk):
             column=0, row=2, sticky=tk.W,
             padx=(5, 5),pady=(5,5))
 
+
     def update_template_labels(self):
 
         ap_id = str(self.controller.data._ap_id)
@@ -191,26 +192,30 @@ class App(tk.Tk):
             padx=(5,5), pady=(5,5))
 
     def update_email_label(self):
+        """ update the email labels text """
         email = str(self.controller.data._email)
         password = str(self.controller.data._password)
         self.frame_email.email_template.set(email)
         self.frame_email.password_template.set(password)
 
+    def _create_menu_bar(self):
+        self.menubar = tk.Menu(self)
+        filemenu = tk.Menu(self.menubar, tearoff=0)
+        filemenu.add_command(label='New', command=())
+        self.menubar.add_cascade(label='File', menu=filemenu)
+        self.config(menu = self.menubar)
+
     def create_labels(self):
         """ Create the GUI """
-
         self._create_pep_entry()
         self._create_zm_entry()
         self._create_qu_entry()
         self._create_crf_entry()
-        #self._create_ap_entry()
-        #self._create_em_entry()
         self._create_visit_entry()
         self._create_ldot_entry()
         self._create_file_name_templates()
-        #self._create_util_buttons()
         self._create_email_label()
-        #self._create_zip_button()
+        self._create_menu_bar()
 
 
 if __name__ == '__main__':
