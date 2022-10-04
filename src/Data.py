@@ -4,6 +4,7 @@ from collections import defaultdict
 import numpy as np
 import Exceptions
 
+
 class Data:
 
     def __init__(self):
@@ -14,7 +15,7 @@ class Data:
         self.pepDictMain, self.pepDictPseudonyms = self.create_pep_dict()
 
         self.emails_df = pd.read_excel(
-            r'Z:\cns\HealthyBrainStudy\Data Management\ActivPAL, ZMax, Empatica\Empatica\Accounts\Empatica accounts.xlsx',
+            r'\\fileserver.dccn.nl\groupshare\cns\HealthyBrainStudy\Data Management\ActivPAL, ZMax, Empatica\Empatica\Accounts\Empatica accounts.xlsx',
             sheet_name = 'Blad1',
             index_col = None)
 
@@ -23,6 +24,7 @@ class Data:
         self._ap_id = None
         self._em_id = None
         self._qu_id = None
+        self._crf_id = None
         self._ldot = None
         self._visit = '1'
         self._email = None
@@ -84,6 +86,13 @@ class Data:
         for i in x:
             if f"QU" in i:
                 self._qu_id = i
+                return i
+
+    def update_crf_id(self):
+        x = self.pepDictMain[self._pep_id]
+        for i in x:
+            if f"HBCRF" in i:
+                self._crf_id = i
                 return i
 
     def update_pep_id(self, pseudo):

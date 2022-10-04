@@ -24,7 +24,7 @@ class App(tk.Tk):
 
         self.title('PEP id\'s')
         self.geometry('600x400+50+50')  # width*height+x+y
-        print(self.winfo_screenwidth())
+        #print(self.winfo_screenwidth())
 
         # Data handler
         self.controller = Control()
@@ -37,9 +37,6 @@ class App(tk.Tk):
         self.frame_left.grid(column=0, row=1)
         self.frame_right = ttk.Frame(self)
         self.frame_right.grid(column=1, row=1, padx=(10,0))
-        #self.frame_right_2 = ttk.Frame(self)
-        #self.frame_right_2.grid(column=2, row=1, padx=(10,0))
-
         button_frame = Buttons.ButtonFrame(self)
         button_frame.grid(column=2, row=1, padx=(10,10))
 
@@ -99,6 +96,14 @@ class App(tk.Tk):
         qu_id_entry.bind('<Return>',
                          lambda event, widget=qu_id_entry, name='qu': self.process(widget, name))
 
+    def _create_crf_entry(self):
+        ttk.Label(self.frame_left, text='CRF:', padding = (5, 5, 5, 5)).grid(column = 0, row=3, sticky=tk.W)
+        self.frame_left.crf_id_text = tk.StringVar(value='HBCRF')
+        self.text_variables['_crf_id'] = self.frame_left.crf_id_text
+        crf_id_entry = ttk.Entry(self.frame_left, width = 30, textvariable = self.frame_left.crf_id_text)
+        crf_id_entry.grid(column=1, row=3, sticky=tk.E)
+        crf_id_entry.bind('<Return>',
+                          lambda event, widget=crf_id_entry, name='crf': self.process(widget, name))
 
     def _create_visit_entry(self):
         ttk.Label(self.frame_right, text='Visit:', padding=(5, 5, 5, 5)).grid(column=0, row=0, stick=tk.W)
@@ -170,14 +175,6 @@ class App(tk.Tk):
         self.frame_templates.em_template.set(f"sub-{em_id}_pre_{visit}_wrb_emp_01.zip")
         self.frame_templates.zm_template.set(f"sub-{zm_id}_pre_{visit}_wrb_zm_1.zip")
 
-    def open_participant_folder(self):
-        os.startfile(f'S:\hbs\sub-{self.controller.data._pep_id}')
-
-    def _create_util_buttons(self):
-
-        # Open participant folder button
-        #ttk.Button(self.frame_right_2, text='Open', command = self.open_participant_folder).grid(column=0, row=0, sticky=tk.E)
-        ttk.Button(self.frame_right_2, text='Open', command = self.open_participant_folder).grid(column=0, row=0, sticky=tk.W)#.pack(side = tk.RIGHT)
 
     def _create_email_label(self):
         self.frame_email = ttk.LabelFrame(self, text='Email')
@@ -199,22 +196,13 @@ class App(tk.Tk):
         self.frame_email.email_template.set(email)
         self.frame_email.password_template.set(password)
 
-    def zip_files(self):
-        #path = 'C:\\Users\\seagie\\Desktop\\ZMax_temporary_automate'
-        #zip_files.main(str(self.controller.data._zm_id), str(self.controller.data._visit), path)
-        zm_id = self.controller.data._zm_id
-        visit = self.controller.data._visit
-        subprocess.Popen(['cd', 'C:\\Users\\seagie\\Desktop\\ZMax_temporary', '&&', 'zip_files.py', '--zm_id', str(zm_id), '--lab_visit', str(visit)], shell=True)
-    def _create_zip_button(self):
-        ttk.Button(self.frame_right_2, text='Zip ZMax', command = self.zip_files).grid(column=0, row=1, sticky=tk.W)
-
-
     def create_labels(self):
         """ Create the GUI """
 
         self._create_pep_entry()
         self._create_zm_entry()
         self._create_qu_entry()
+        self._create_crf_entry()
         #self._create_ap_entry()
         #self._create_em_entry()
         self._create_visit_entry()
