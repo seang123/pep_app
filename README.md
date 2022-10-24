@@ -3,6 +3,39 @@
 Reading PEP id's and other Pseudo id's for HBS
 
 
+## Zipping files
+
+- Requires files to be located on the desktop in a folder called __ZMax_temporary__.
+- Should have sub-folders labled 1-7
+- The extraced files should be placed in their respective sub-folder (name refers to day)
+  - If a day has recordings from more than one data-file, these should be placed in sub-folders within the day folder
+  - If the files come from different Zmax's, name the sub-folders after the device id otherwise 'a', 'b', ... also works.
+- The raw data files should be stored at the top-level in the ZMax_temporary folder.
+
+```
+Desktop
+|-- ZMax_temporary
+|   |-- 1
+|   |   +-- *.edf 
+|   |-- 2
+|   |   |-- Zmax19
+|   |   |-- Zmax20
+|   |-- 3
+|   |   |-- A
+|   |   |-- B
+|   |-- 4
+|   |-- 5
+|   |-- 5
+|   |-- 6 
+|   |-- 7
+|   +-- hypno1.hyp
+|   +-- hypno2.hyp
+|   ...
+```
+
+## Empatica duration
+
+- The downloaded empatica data files should be stored in a folder on the desktop called __Empatica_temporary__
 
 #### Requirements
 
