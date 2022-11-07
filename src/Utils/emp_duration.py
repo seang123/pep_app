@@ -26,3 +26,10 @@ def compute_duration():
     #print(f"Time in hours: {total_time / 3600}")
     #print(f"Time in days: {total_time / 86400}")
     return f'{(total_time / 3600):.2f}'
+
+def rename_files(em_id, lab_visit):
+    files = list(os.scandir(PATH))
+    files.sort(key=lambda x: os.path.getmtime(x))
+    for ii, file in enumerate(files, start=1):
+        os.rename(file.path, f'{PATH}/sub-{em_id}_pre_{lab_visit}_wrb_emp_{ii}.zip')
+

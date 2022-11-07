@@ -19,6 +19,7 @@ class ButtonFrame(ttk.Frame):
         self.empatica_duration_button()
         self._create_zip_button()
         self.open_participant_button()
+        self.empatica_rename_button()
 
 
     def open_participant_button(self):
@@ -38,6 +39,13 @@ class ButtonFrame(ttk.Frame):
             print('Empatica duration:', duration, '(hours)')
         ttk.Button(self, text='Emp dur', command = compute_duration).grid(column=0, row=2, sticky=tk.W)
 
+    def empatica_rename_button(self):
+        """ Rename empatica files """
+        def rename():
+            em_id = self.parent.controller.data._em_id
+            lab_visit = self.parent.controller.data._visit
+            emp_duration.rename_files(em_id, lab_visit)
+        ttk.Button(self, text='Emp name', command = rename).grid(column=0, row=3, sticky=tk.W)
 
     def _create_zip_button(self):
         def zip_files():

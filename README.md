@@ -46,6 +46,8 @@ Desktop
 
 # TODO
 
-- handle zip_files.py edge case for when extracted files are in nested directory (in the case
+- [x] handle zip_files.py edge case for when extracted files are in nested directory (in the case
 that two sets of data exist for a single date)
-- Refactor each frame into its own class/module
+- [ ] Add information from planner tool
+- [ ] Add logging 
+- [ ] Refactor each frame into its own class/module

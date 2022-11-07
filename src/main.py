@@ -8,7 +8,7 @@ from Data import Data
 from Control import Control
 from Utils import zip_files
 import subprocess
-from Frames import Buttons
+from Frames import Buttons, plannertool_frame
 
 # https://www.pythontutorial.net/tkinter/
 
@@ -39,6 +39,9 @@ class App(tk.Tk):
         self.frame_right.grid(column=1, row=1, padx=(10,0))
         button_frame = Buttons.ButtonFrame(self)
         button_frame.grid(column=2, row=1, padx=(10,10))
+
+        pt_frame = plannertool_frame.PlannertoolFrame(self)
+        pt_frame.grid(column=1, row=2, padx=(10,10))
 
 
         # Create widgets
