@@ -2,13 +2,12 @@ import tkinter as tk
 from tkinter import ttk
 import os
 import subprocess
-from Utils import get_plannertool
 
 USER = os.getlogin()
 
 """
 - Lab date
--RA
+- RA
 
 """
 
@@ -17,10 +16,6 @@ class PlannertoolFrame(ttk.Frame):
     def __init__(self, parent):
         super().__init__(parent)
         self.parent = parent
-        # Download latest planner tool
-        get_plannertool.download_plannertool()
-        # Read planner-tool
-        pt = get_plannertool.read_plannertool()
 
         self._create_widgets()
 
@@ -30,8 +25,27 @@ class PlannertoolFrame(ttk.Frame):
         self.frame_pt.grid(column=0, row=0, padx=(5,5), pady=(0,0))
 
         self.frame_pt.ra_string = tk.StringVar(value='RA')
-        ttk.Entry(self.frame_pt, textvariable = self.frame_pt.ra_string, state='readonly', width=34).grid(
+        ttk.Entry(self.frame_pt, textvariable = self.frame_pt.ra_string, state='readonly', width=20).grid(
             column=0, row=0, sticky=tk.W, padx=(5,5), pady=(5,5))
+
+        self.frame_pt.date_string = tk.StringVar(value='Lab Date')
+        ttk.Entry(self.frame_pt, textvariable = self.frame_pt.date_string, state='readonly', width=20).grid(
+            column=0, row=1, sticky=tk.W, padx=(5,5), pady=(5,5))
+
+        self.frame_pt.slot_string = tk.StringVar(value='MRI slot')
+        ttk.Entry(self.frame_pt, textvariable = self.frame_pt.slot_string, state='readonly', width=20).grid(
+            column=0, row=2, sticky=tk.W, padx=(5,5), pady=(5,5))
+
+    def update(self):
+
+        ra = self.parent.controller.data._ra
+        lab_visit_date = self.parent.controller.data._visit_date
+        mri_slot = self.parent.controller.data._mri_slot
+
+        self.frame_pt.ra_string.set(ra)
+        self.frame_pt.date_string.set(lab_visit_date)
+        self.frame_pt.slot_string.set(mri_slot)
+
 
 
     """

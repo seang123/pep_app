@@ -40,8 +40,8 @@ class App(tk.Tk):
         button_frame = Buttons.ButtonFrame(self)
         button_frame.grid(column=2, row=1, padx=(10,10))
 
-        pt_frame = plannertool_frame.PlannertoolFrame(self)
-        pt_frame.grid(column=1, row=2, padx=(10,10))
+        self.pt_frame = plannertool_frame.PlannertoolFrame(self)
+        self.pt_frame.grid(column=1, row=3, padx=(10,10))
 
 
         # Create widgets
@@ -55,6 +55,7 @@ class App(tk.Tk):
             v.set(self.controller.data.__dict__[k])
         self.update_template_labels()
         self.update_email_label()
+        self.pt_frame.update()
 
     def process(self, widget, name):
         """ Update the variables using the given widgets input value

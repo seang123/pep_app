@@ -3,7 +3,9 @@ import os
 from collections import defaultdict
 import numpy as np
 import Exceptions
+from Utils import get_plannertool
 
+USER = os.getlogin()
 
 class Data:
 
@@ -19,6 +21,11 @@ class Data:
             sheet_name = 'Blad1',
             index_col = None)
 
+        # Download latest planner tool
+        get_plannertool.download_plannertool()
+        # Read planner-tool
+        self.pt_df = get_plannertool.read_plannertool()
+
         self._pep_id = None
         self._zm_id = None
         self._ap_id = None
@@ -29,6 +36,9 @@ class Data:
         self._visit = '1'
         self._email = None
         self._password = None
+        self._ra = None
+        self._visit_date = None
+        self._mri_slot = None
 
     def create_pep_dict(self):
         """ Create map{pep-id -> pseudos} and map{pseudo -> pep-id} """
@@ -137,3 +147,23 @@ class Data:
             self._email = None
             self._password = None
 
+
+    def update_plannertool(self):
+        """ update planner-tool information """
+        visit_str = f'Labvisit {self._visit}'
+        pt_row = self.pt_df.query('Participant == @self._ldot & Type == @visit_str')
+        try:
+            self._ra = pt_row['RA'].item()
+        except IndexError as e:
+            self._ra = 'Fail'
+            print(e)
+
+        try:
+            day = pt_row['Date'].item().day_name()[:3]
+            self._visit_date = f"{day} {pt_row['Date'].item().strftime('%d-%m-%Y')}"  #.date()
+        except IndexError as e:
+            self._visit_date = 'Fail'
+            print(e)
+
+        slot = str(int(pt_row['Slot'].item()))
+        self._mri_slot = slot
