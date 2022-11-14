@@ -32,11 +32,11 @@ class Control:
             self.data._ldot = value
             self.data.pep_from_ldot(value)
 
+        self.data.update_ldot()
         self.data.update_zm_id()
         self.data.update_qu_id()
         self.data.update_crf_id()
         self.data.update_ap_id()
         self.data.update_em_id()
-        self.data.update_ldot()
         self.data.update_email()
         self.data.update_plannertool()
