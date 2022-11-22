@@ -163,7 +163,7 @@ class App(tk.Tk):
             column=0, row=1, sticky=tk.W,
             padx=(5,5), pady=(5,5))
 
-        self.frame_templates.zm_template = tk.StringVar(value = f"sub-{zm_id}_pre_{visit}_wrb_zm_1.zip")
+        self.frame_templates.zm_template = tk.StringVar(value = f"sub-{zm_id}_pre_{visit}_wrb_zmx_1.zip")
         ttk.Entry(self.frame_templates, textvariable = self.frame_templates.zm_template, state='readonly', width=50).grid(
             column=0, row=2, sticky=tk.W,
             padx=(5, 5),pady=(5,5))

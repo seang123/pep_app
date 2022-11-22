@@ -31,5 +31,5 @@ def rename_files(em_id, lab_visit):
     files = list(os.scandir(PATH))
     files.sort(key=lambda x: os.path.getmtime(x))
     for ii, file in enumerate(files, start=1):
-        os.rename(file.path, f'{PATH}/sub-{em_id}_pre_{lab_visit}_wrb_emp_{ii}.zip')
+        os.rename(file.path, f'{PATH}/sub-{em_id}_pre_{lab_visit}_wrb_emp_{ii:02}.zip')
 
