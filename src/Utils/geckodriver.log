@@ -499,3 +499,242 @@ JavaScript warning: https://code.jquery.com/jquery-1.9.0.min.js, line 4: Using /
 JavaScript warning: https://code.jquery.com/jquery-1.9.0.min.js, line 4: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
 1668440807037	Marionette	INFO	Stopped listening on port 56158
 console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+1669124129980	geckodriver	INFO	Listening on 127.0.0.1:58699
+1669124133018	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "58700" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\seagie\\AppData\\Local\\Temp\\rust_mozprofileQX7BjL"
+1669124134997	Marionette	INFO	Marionette enabled
+1669124135002	Marionette	INFO	Listening on port 58710
+Read port: 58710
+WebDriver BiDi listening on ws://127.0.0.1:58700
+1669124135478	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\seagie\\AppData\\Local\\Temp\\rust_mozprofileQX7BjL\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:58700/devtools/browser/99a00943-1879-4583-b637-b357f3191d11
+JavaScript warning: https://code.jquery.com/jquery-1.9.0.min.js, line 4: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.empatica.com."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.empatica.com."
+JavaScript warning: https://code.jquery.com/jquery-1.9.0.min.js, line 4: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+1669124148910	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+JavaScript warning: https://code.jquery.com/jquery-1.9.0.min.js, line 4: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+1669124211943	Marionette	INFO	Stopped listening on port 58710
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+1669124213963	geckodriver	INFO	Listening on 127.0.0.1:58757
+1669124217041	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "58758" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\seagie\\AppData\\Local\\Temp\\rust_mozprofilemaXACc"
+1669124217472	Marionette	INFO	Marionette enabled
+1669124217476	Marionette	INFO	Listening on port 58767
+Read port: 58767
+WebDriver BiDi listening on ws://127.0.0.1:58758
+1669124217605	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\seagie\\AppData\\Local\\Temp\\rust_mozprofilemaXACc\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:58758/devtools/browser/21e21ea6-ae1d-42b1-ac14-80573ae5cbe1
+JavaScript warning: https://code.jquery.com/jquery-1.9.0.min.js, line 4: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.empatica.com."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.empatica.com."
+JavaScript warning: https://code.jquery.com/jquery-1.9.0.min.js, line 4: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+1669124226784	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+JavaScript warning: https://code.jquery.com/jquery-1.9.0.min.js, line 4: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+1669124244214	Marionette	INFO	Stopped listening on port 58767
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+1669124311529	geckodriver	INFO	Listening on 127.0.0.1:58837
+1669124314590	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "58838" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\seagie\\AppData\\Local\\Temp\\rust_mozprofiledyxcUE"
+1669124315051	Marionette	INFO	Marionette enabled
+1669124315055	Marionette	INFO	Listening on port 58847
+WebDriver BiDi listening on ws://127.0.0.1:58838
+Read port: 58847
+1669124316120	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\seagie\\AppData\\Local\\Temp\\rust_mozprofiledyxcUE\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:58838/devtools/browser/a2b7db91-bfdf-4992-bc3c-8e01c7e6cd6a
+JavaScript warning: https://code.jquery.com/jquery-1.9.0.min.js, line 4: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.empatica.com."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.empatica.com."
+JavaScript warning: https://code.jquery.com/jquery-1.9.0.min.js, line 4: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+1669124324868	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+JavaScript warning: https://code.jquery.com/jquery-1.9.0.min.js, line 4: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+1669124335232	Marionette	INFO	Stopped listening on port 58847
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+[Parent 9536, IPC I/O Parent] WARNING: file /builds/worker/checkouts/gecko/ipc/chromium/src/base/process_util_win.cc:167
+1669124363206	geckodriver	INFO	Listening on 127.0.0.1:58892
+1669124366268	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "58893" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\seagie\\AppData\\Local\\Temp\\rust_mozprofilekFblm5"
+1669124366721	Marionette	INFO	Marionette enabled
+1669124366725	Marionette	INFO	Listening on port 58902
+WebDriver BiDi listening on ws://127.0.0.1:58893
+Read port: 58902
+1669124367874	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\seagie\\AppData\\Local\\Temp\\rust_mozprofilekFblm5\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:58893/devtools/browser/b9d2e1ca-7247-4ae6-892c-cf9b84103fad
+JavaScript warning: https://code.jquery.com/jquery-1.9.0.min.js, line 4: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.empatica.com."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.empatica.com."
+JavaScript warning: https://code.jquery.com/jquery-1.9.0.min.js, line 4: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+1669124375559	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+JavaScript warning: https://code.jquery.com/jquery-1.9.0.min.js, line 4: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+1669124385426	Marionette	INFO	Stopped listening on port 58902
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+1669124397465	geckodriver	INFO	Listening on 127.0.0.1:58948
+1669124400523	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "58949" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\seagie\\AppData\\Local\\Temp\\rust_mozprofile8wEx2J"
+1669124400982	Marionette	INFO	Marionette enabled
+1669124400987	Marionette	INFO	Listening on port 58958
+WebDriver BiDi listening on ws://127.0.0.1:58949
+Read port: 58958
+1669124402072	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\seagie\\AppData\\Local\\Temp\\rust_mozprofile8wEx2J\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:58949/devtools/browser/e1e654b6-d04c-41cf-809f-df4317a8d78d
+JavaScript warning: https://code.jquery.com/jquery-1.9.0.min.js, line 4: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.empatica.com."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.empatica.com."
+JavaScript warning: https://code.jquery.com/jquery-1.9.0.min.js, line 4: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+1669124410549	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+JavaScript warning: https://code.jquery.com/jquery-1.9.0.min.js, line 4: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+1669124429149	Marionette	INFO	Stopped listening on port 58958
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+1669124442153	geckodriver	INFO	Listening on 127.0.0.1:59004
+1669124445215	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "59005" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\seagie\\AppData\\Local\\Temp\\rust_mozprofilepadDZ9"
+1669124445590	Marionette	INFO	Marionette enabled
+1669124445595	Marionette	INFO	Listening on port 59014
+WebDriver BiDi listening on ws://127.0.0.1:59005
+Read port: 59014
+1669124446129	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\seagie\\AppData\\Local\\Temp\\rust_mozprofilepadDZ9\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:59005/devtools/browser/b9ebcb6f-5ff0-4094-8a87-1caaecb91a47
+JavaScript warning: https://code.jquery.com/jquery-1.9.0.min.js, line 4: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.empatica.com."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.empatica.com."
+JavaScript warning: https://code.jquery.com/jquery-1.9.0.min.js, line 4: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+1669124454914	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+JavaScript warning: https://code.jquery.com/jquery-1.9.0.min.js, line 4: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+1669124469804	Marionette	INFO	Stopped listening on port 59014
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+1669124657802	geckodriver	INFO	Listening on 127.0.0.1:59083
+1669124660856	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "59084" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\seagie\\AppData\\Local\\Temp\\rust_mozprofileL2BFBN"
+1669124661311	Marionette	INFO	Marionette enabled
+1669124661315	Marionette	INFO	Listening on port 59095
+WebDriver BiDi listening on ws://127.0.0.1:59084
+Read port: 59095
+1669124662334	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\seagie\\AppData\\Local\\Temp\\rust_mozprofileL2BFBN\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:59084/devtools/browser/0f29db91-6160-40af-a894-48a19bfa95c2
+JavaScript warning: https://code.jquery.com/jquery-1.9.0.min.js, line 4: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.empatica.com."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.empatica.com."
+JavaScript warning: https://code.jquery.com/jquery-1.9.0.min.js, line 4: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+1669124669572	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+JavaScript warning: https://code.jquery.com/jquery-1.9.0.min.js, line 4: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+1669124988517	geckodriver	INFO	Listening on 127.0.0.1:59160
+1669125574905	geckodriver	INFO	Listening on 127.0.0.1:59199
+1669125577965	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "59200" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\seagie\\AppData\\Local\\Temp\\rust_mozprofileeybt1T"
+1669125578392	Marionette	INFO	Marionette enabled
+1669125578408	Marionette	INFO	Listening on port 59209
+Read port: 59209
+WebDriver BiDi listening on ws://127.0.0.1:59200
+1669125578519	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\seagie\\AppData\\Local\\Temp\\rust_mozprofileeybt1T\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:59200/devtools/browser/9647a095-d8ab-4695-8238-461c550d6ecc
+JavaScript warning: https://code.jquery.com/jquery-1.9.0.min.js, line 4: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.empatica.com."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.empatica.com."
+JavaScript warning: https://code.jquery.com/jquery-1.9.0.min.js, line 4: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+1669125587211	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+JavaScript warning: https://code.jquery.com/jquery-1.9.0.min.js, line 4: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+1669125593881	Marionette	INFO	Stopped listening on port 59209
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+1669125609700	geckodriver	INFO	Listening on 127.0.0.1:59256
+1669125612781	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "59257" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\seagie\\AppData\\Local\\Temp\\rust_mozprofile4lBLMu"
+1669125613136	Marionette	INFO	Marionette enabled
+1669125613140	Marionette	INFO	Listening on port 59266
+WebDriver BiDi listening on ws://127.0.0.1:59257
+Read port: 59266
+1669125614039	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\seagie\\AppData\\Local\\Temp\\rust_mozprofile4lBLMu\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:59257/devtools/browser/ef28b844-7d2d-4621-a975-81c3e0738ac6
+JavaScript warning: https://code.jquery.com/jquery-1.9.0.min.js, line 4: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.empatica.com."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.empatica.com."
+JavaScript warning: https://code.jquery.com/jquery-1.9.0.min.js, line 4: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+1669125622180	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+JavaScript warning: https://code.jquery.com/jquery-1.9.0.min.js, line 4: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+1669125633179	Marionette	INFO	Stopped listening on port 59266
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+1669125653383	geckodriver	INFO	Listening on 127.0.0.1:59311
+1669125656439	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "59312" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\seagie\\AppData\\Local\\Temp\\rust_mozprofile5Cx937"
+1669125656885	Marionette	INFO	Marionette enabled
+1669125656889	Marionette	INFO	Listening on port 59321
+WebDriver BiDi listening on ws://127.0.0.1:59312
+Read port: 59321
+1669125657933	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\seagie\\AppData\\Local\\Temp\\rust_mozprofile5Cx937\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:59312/devtools/browser/7895f71a-d052-4356-9692-f6fb088bb8f7
+JavaScript warning: https://code.jquery.com/jquery-1.9.0.min.js, line 4: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.empatica.com."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.empatica.com."
+JavaScript warning: https://code.jquery.com/jquery-1.9.0.min.js, line 4: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+1669125666761	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+JavaScript warning: https://code.jquery.com/jquery-1.9.0.min.js, line 4: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+1669125683509	Marionette	INFO	Stopped listening on port 59321
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+[Parent 12016, IPC I/O Parent] WARNING: file /builds/worker/checkouts/gecko/ipc/chromium/src/base/process_util_win.cc:167
+1669125742994	geckodriver	INFO	Listening on 127.0.0.1:59369
+1669125746074	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "59370" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\seagie\\AppData\\Local\\Temp\\rust_mozprofile9TuL5D"
+1669125746433	Marionette	INFO	Marionette enabled
+1669125746438	Marionette	INFO	Listening on port 59380
+WebDriver BiDi listening on ws://127.0.0.1:59370
+Read port: 59380
+1669125746864	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\seagie\\AppData\\Local\\Temp\\rust_mozprofile9TuL5D\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:59370/devtools/browser/4cbac3d0-9cc4-4ca2-8061-9f93c441064a
+JavaScript warning: https://code.jquery.com/jquery-1.9.0.min.js, line 4: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.empatica.com."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.empatica.com."
+JavaScript warning: https://code.jquery.com/jquery-1.9.0.min.js, line 4: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+1669125755341	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+JavaScript warning: https://code.jquery.com/jquery-1.9.0.min.js, line 4: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+1669125778047	Marionette	INFO	Stopped listening on port 59380
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+1669125798688	geckodriver	INFO	Listening on 127.0.0.1:59429
+1669125801752	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "59430" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\seagie\\AppData\\Local\\Temp\\rust_mozprofilea4gLCA"
+1669125802239	Marionette	INFO	Marionette enabled
+1669125802243	Marionette	INFO	Listening on port 59439
+WebDriver BiDi listening on ws://127.0.0.1:59430
+Read port: 59439
+1669125803287	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\seagie\\AppData\\Local\\Temp\\rust_mozprofilea4gLCA\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:59430/devtools/browser/ad6904f5-6971-423d-bae5-599b2e8cd744
+JavaScript warning: https://code.jquery.com/jquery-1.9.0.min.js, line 4: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.empatica.com."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.empatica.com."
+JavaScript warning: https://code.jquery.com/jquery-1.9.0.min.js, line 4: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+1669125812503	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+JavaScript warning: https://code.jquery.com/jquery-1.9.0.min.js, line 4: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+1669125822778	Marionette	INFO	Stopped listening on port 59439
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+1669125845873	geckodriver	INFO	Listening on 127.0.0.1:59489
+1669125848927	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "59490" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\seagie\\AppData\\Local\\Temp\\rust_mozprofilecsIgrl"
+1669125849391	Marionette	INFO	Marionette enabled
+1669125849394	Marionette	INFO	Listening on port 59499
+WebDriver BiDi listening on ws://127.0.0.1:59490
+Read port: 59499
+1669125850327	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\seagie\\AppData\\Local\\Temp\\rust_mozprofilecsIgrl\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:59490/devtools/browser/f7ca8908-b8da-4561-ab8b-8f81ee0efe56
+JavaScript warning: https://code.jquery.com/jquery-1.9.0.min.js, line 4: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.empatica.com."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.empatica.com."
+JavaScript warning: https://code.jquery.com/jquery-1.9.0.min.js, line 4: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+1669125859239	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+JavaScript warning: https://code.jquery.com/jquery-1.9.0.min.js, line 4: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+1669125892975	Marionette	INFO	Stopped listening on port 59499
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+1669125900718	geckodriver	INFO	Listening on 127.0.0.1:59546
+1669125903805	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "59547" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\seagie\\AppData\\Local\\Temp\\rust_mozprofileytyJ0d"
+1669125904134	Marionette	INFO	Marionette enabled
+1669125904138	Marionette	INFO	Listening on port 59556
+WebDriver BiDi listening on ws://127.0.0.1:59547
+Read port: 59556
+1669125905290	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\seagie\\AppData\\Local\\Temp\\rust_mozprofileytyJ0d\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:59547/devtools/browser/fc642b6e-66b6-456c-974e-14ec79bb4309
+JavaScript warning: https://code.jquery.com/jquery-1.9.0.min.js, line 4: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.empatica.com."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.empatica.com."
+JavaScript warning: https://code.jquery.com/jquery-1.9.0.min.js, line 4: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+1669125913518	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+JavaScript warning: https://code.jquery.com/jquery-1.9.0.min.js, line 4: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+1669125922325	Marionette	INFO	Stopped listening on port 59556
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.

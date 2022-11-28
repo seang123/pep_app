@@ -6,5 +6,6 @@
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="module" module-name="scripts" />
     <orderEntry type="module" module-name="age_sex" />
+    <orderEntry type="module" module-name="sql_sandbox" />
   </component>
 </module>

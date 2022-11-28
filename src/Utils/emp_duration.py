@@ -1,6 +1,7 @@
 import os
 import pandas as pd
 import zipfile
+from collections import OrderedDict
 
 USER = os.getlogin()
 PATH = f"C:\\Users\\{USER}\\Desktop\\Empatica_temporary"
@@ -29,7 +30,30 @@ def compute_duration():
 
 def rename_files(em_id, lab_visit):
     files = list(os.scandir(PATH))
-    files.sort(key=lambda x: os.path.getmtime(x))
-    for ii, file in enumerate(files, start=1):
-        os.rename(file.path, f'{PATH}/sub-{em_id}_pre_{lab_visit}_wrb_emp_{ii:02}.zip')
 
+    ## Sort based on the download/modify time
+    #files.sort(key=lambda x: os.path.getmtime(x))
+    #for ii, file in enumerate(files, start=1):
+    #    os.rename(file.path, f'{PATH}/sub-{em_id}_pre_{lab_visit}_wrb_emp_{ii:02}.zip')
+
+    ## Sort based on the timestamp in the filename
+    try:
+        files_ = {}
+        for f in files:
+            files_[f.name.split('_')[0]] = f
+
+        files_ = OrderedDict(sorted(files_.items()))
+
+        ii = 1
+        for key, file in files_.items():
+            os.rename(file.path, f'{PATH}/sub-{em_id}_pre_{lab_visit}_wrb_emp_{ii:02}.zip')
+            ii += 1
+    except FileExistsError as e:
+        print(e)
+        files.sort(key=lambda x: os.path.getmtime(x))
+        for ii, file in enumerate(files, start=1):
+            os.rename(file.path, f'{PATH}/sub-{em_id}_pre_{lab_visit}_wrb_emp_{ii:02}.zip')
+
+
+if __name__ == '__main__':
+    rename_files('abc', '420')

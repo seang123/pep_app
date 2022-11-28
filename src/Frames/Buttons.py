@@ -25,7 +25,7 @@ class ButtonFrame(ttk.Frame):
     def open_participant_button(self):
         """ Open participant S:\hbs\sub-xxx folder """
         def open_participant_folder():
-            os.startfile(f'S:\hbs\sub-{self.parent.controller.data._pep_id}')
+            os.startfile(f'S:\hbs\sub-{self.parent.controller.data._pep_id}\pre-{self.parent.controller.data._visit}\wrb')
         ttk.Button(self, text='Open', command = open_participant_folder).grid(column=0, row=0, sticky=tk.W)#.pack(side = tk.RIGHT)
 
 

@@ -83,7 +83,7 @@ def process_one(app, i):
 
 
 def main():
-    for i in [1, 2, 3, 4, 5, 6, 7, 8]:
+    for i in [1, 2, 3, 4, 5, 6, 7]:
         print(f'Decoding hyno: {i}')
         app = open_app(True)
         process_one(app, str(i))
