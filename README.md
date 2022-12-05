@@ -49,5 +49,8 @@ Desktop
 - [x] handle zip_files.py edge case for when extracted files are in nested directory (in the case
 that two sets of data exist for a single date)
 - [x] Add information from planner tool
+- [x] fixed bug where multiple entries for same lab visit in PT caused failure to get Ra/slot/data
+- [x] Add Activpal file rename button
+- [ ] Add button to open empatica.com/connect website
 - [ ] Add logging 
 - [ ] Refactor each frame into its own class/module

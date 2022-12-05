@@ -20,6 +20,7 @@ class ButtonFrame(ttk.Frame):
         self._create_zip_button()
         self.open_participant_button()
         self.empatica_rename_button()
+        self._rename_activpal_button()
 
 
     def open_participant_button(self):
@@ -58,3 +59,18 @@ class ButtonFrame(ttk.Frame):
         ttk.Button(self, text='Zip ZMax', command = zip_files).grid(column=0, row=1, sticky=tk.W)
 
 
+    def _rename_activpal_button(self):
+        def rename():
+            """ Rename the downloaded/exported activpal data files inside the subject folder """
+            # .datx | .pml | .csv
+            ap_id = self.parent.controller.data._ap_id
+            visit = self.parent.controller.data._visit
+            for ii, file in enumerate(os.scandir(f'S:\hbs\sub-{pep_id}\pre-{visit}\wrb')):
+                if '.datx' in file.name:
+                    os.rename(file.path, f'S:\hbs\sub-{pep_id}\pre-{visit}\wrb\sub-{ap_id}_pre_{visit}_wrb_apl.datx')
+                elif '.pml' in file.name:
+                    os.rename(file.path, f'S:\hbs\sub-{pep_id}\pre-{visit}\wrb\sub-{ap_id}_pre_{visit}_wrb_apl.pml')
+                elif '.csv' in file.name and str(ap_id) in file.name:
+                    os.rename(file.path, f'S:\hbs\sub-{pep_id}\pre-{visit}\wrb\sub-{ap_id}_pre_{visit}_wrb_apl-evs.csv')
+
+        ttk.Button(self, text='ActPal', command = rename).grid(column=0, row=4, sticky=tk.W)

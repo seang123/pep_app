@@ -7,5 +7,9 @@
     <orderEntry type="module" module-name="scripts" />
     <orderEntry type="module" module-name="age_sex" />
     <orderEntry type="module" module-name="sql_sandbox" />
+    <orderEntry type="module" module-name="self_referent_encoding_processing" />
+    <orderEntry type="module" module-name="Time_overview" />
+    <orderEntry type="module" module-name="rename_files" />
+    <orderEntry type="module" module-name="remove_files_from_subjectfolder" />
   </component>
 </module>

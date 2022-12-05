@@ -151,19 +151,26 @@ class Data:
     def update_plannertool(self):
         """ update planner-tool information """
         visit_str = f'Labvisit {self._visit}'
-        pt_row = self.pt_df.query('Participant == @self._ldot & Type == @visit_str')
+        pt_row = self.pt_df.query('Participant == @self._ldot & Type == @visit_str').iloc[[-1]]
         try:
             self._ra = pt_row['RA'].item()
-        except IndexError as e:
-            self._ra = 'Fail'
+        except (IndexError, ValueError) as e:
+            self._ra = '--'
+            print('fail at getting RA')
             print(e)
 
         try:
             day = pt_row['Date'].item().day_name()[:3]
             self._visit_date = f"{day} {pt_row['Date'].item().strftime('%d-%m-%Y')}"  #.date()
-        except IndexError as e:
-            self._visit_date = 'Fail'
+        except (IndexError, ValueError) as e:
+            self._visit_date = '--'
+            print('fail at getting date')
             print(e)
 
-        slot = str(int(pt_row['Slot'].item()))
-        self._mri_slot = slot
+        try:
+            slot = str(int(pt_row['Slot'].item()))
+            self._mri_slot = slot
+        except (IndexError, ValueError) as e:
+            self._mri_slot = '--'
+            print('fail at getting slot')
+            print(e)

@@ -65,7 +65,7 @@ def zip_folder_contents2(path: str, zm_id, lab_visit):
         raise EmptyFolder(f'No files in folder: {path}')
 
     # Create cmd to run
-    cmd = ["7z", "a", f"sub-{zm_id}_pre-{lab_visit}_wrb_zmax_{folder_name}.zip"]
+    cmd = ["7z", "a", f"sub-{zm_id}_pre-{lab_visit}_wrb_zmx_{folder_name}.zip"]
     for dirname, subdirs, files in os.walk(path):
         for f in files:
             if '.edf' in f:
@@ -80,7 +80,7 @@ def zip_folder_contents2(path: str, zm_id, lab_visit):
 
     if not out.returncode == 0:
         # If the previous attempt failed
-        cmd = ["7z", "a", f"sub-{zm_id}_pre-{lab_visit}_wrb_zmax_{folder_name}.zip"]
+        cmd = ["7z", "a", f"sub-{zm_id}_pre-{lab_visit}_wrb_zmx_{folder_name}.zip"]
         def find_edf(path):
             """ Recursively find any folders which contain a .hyp file """
             locations = []

@@ -2,9 +2,13 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://M:/HBS_work/Notebooks/Time_overview/.idea/Time_overview.iml" filepath="M:/HBS_work/Notebooks/Time_overview/.idea/Time_overview.iml" />
       <module fileurl="file://S:/code/Scripts/age_sex/.idea/age_sex.iml" filepath="S:/code/Scripts/age_sex/.idea/age_sex.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/pep_app.iml" filepath="$PROJECT_DIR$/.idea/pep_app.iml" />
+      <module fileurl="file://S:/code/Scripts/remove_files_from_subjectfolder/.idea/remove_files_from_subjectfolder.iml" filepath="S:/code/Scripts/remove_files_from_subjectfolder/.idea/remove_files_from_subjectfolder.iml" />
+      <module fileurl="file://M:/HBS_work/Tasks/rename_files/.idea/rename_files.iml" filepath="M:/HBS_work/Tasks/rename_files/.idea/rename_files.iml" />
       <module fileurl="file://M:/HBS_work/scripts/.idea/scripts.iml" filepath="M:/HBS_work/scripts/.idea/scripts.iml" />
+      <module fileurl="file://S:/code/Scripts/Computer tasks/self_referent_encoding_processing/.idea/self_referent_encoding_processing.iml" filepath="S:/code/Scripts/Computer tasks/self_referent_encoding_processing/.idea/self_referent_encoding_processing.iml" />
       <module fileurl="file://$PROJECT_DIR$/../sql_sandbox/.idea/sql_sandbox.iml" filepath="$PROJECT_DIR$/../sql_sandbox/.idea/sql_sandbox.iml" />
     </modules>
   </component>
