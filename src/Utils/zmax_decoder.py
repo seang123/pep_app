@@ -87,6 +87,7 @@ def main():
         print(f'Decoding hyno: {i}')
         app = open_app(True)
         process_one(app, str(i))
+    print('Finished!')
 
 
 

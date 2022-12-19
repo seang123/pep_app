@@ -13,6 +13,10 @@ Download the empatica data from empatica.com/connect/
 
 Delete:
 dertigersbrein_02@donders.ru.nl -- A02E3E
+dertigersbrein_02@donders.ru.nl -- A02E18
+dertigersbrein_03@donders.ru.nl -- A02712
+dertigersbrein_06@donders.ru.nl -- A045F9
+dertigersbrein_14@donders.ru.nl -- A02DFC
 dertigersbrein_15@donders.ru.nl -- A043AC
 """
 
@@ -38,11 +42,19 @@ def get_table(driver: selenium.webdriver) -> pd.DataFrame:
     return table[1]
 
 
-def _download(driver: selenium.webdriver, sessions_data: pd.DataFrame, emp_id: str):
-    """ Download device data """
+def get_sessions_to_download(driver: selenium.webdriver, sessions_data: pd.DataFrame, emp_id: str):
+    """ Get the indices of the sessions to download
+
+    These are used to index the XPath variable and get the right download button
+
+    :param driver:
+    :param sessions_data:
+    :param emp_id:
+    :return: np.array of session indices + 1 (XPath idx starts at 1)
+    """
     print(f"Downloading data for: {emp_id}")
     idx = '1'
-    download_path = f'/html/body/div[3]/div[2]/div/div/table/tbody/tr[{idx}]/td[5]/div/a[3]'
+    #download_path = f'/html/body/div[3]/div[2]/div/div/table/tbody/tr[{idx}]/td[5]/div/a[3]'
 
     def remove_version(row):
         x = row['Device'].split(' ')[0]
@@ -50,10 +62,34 @@ def _download(driver: selenium.webdriver, sessions_data: pd.DataFrame, emp_id: s
     sessions_data['Device'] = sessions_data.apply(lambda row: remove_version(row), axis=1)
 
     emp_rows = sessions_data.query('Device == @emp_id')
-    emp_rows_index = emp_rows.index.values - 1
+    emp_rows_index = emp_rows.index.values + 1
+    emp_session_ids = emp_rows['Session'].values
+    return emp_rows_index, emp_session_ids
 
-    for i in emp_rows_index:
-        download_button = f'/html/body/div[3]/div[2]/div/div/table/tbody/tr[{i}]/td[5]/div/a[3]'
+def _download(driver: selenium.webdriver, value: int | str):
+    download_button = f'/html/body/div[3]/div[2]/div/div/table/tbody/tr[{value}]/td[5]/div/a[3]'
+    download_button = driver.find_element(By.XPATH, download_button)
+    download_button.middleclick()
+    return driver
+
+
+def _download_loop(driver: selenium.webdriver, sessions_data: pd.DataFrame, emp_id: str):
+    """ If we middle click the download button, we don't need to potentially reload the site due to the pop up.
+
+    :return: current driver state
+    """
+
+    to_download_indices, emp_session_ids = get_sessions_to_download(driver, sessions_data, emp_id)
+    for i, k in zip(to_download_indices, emp_session_ids):
+        print(i, k)
+
+        link = f'https://www.empatica.com/connect/download.php?id={k}'
+        body = driver.find_element(By.XPATH, "/html/body").send_keys(Keys.CONTROL + 't')
+        break
+
+    raise
+
+    return driver
 
 
 def _delete_by_id(driver: selenium.webdriver, emp_id: str):
@@ -77,7 +113,7 @@ def load(username: str, password: str):
     # Open browser and visit page
     driver = webdriver.Firefox()
     driver.get('https://empatica.com/connect/')
-    driver.implicitly_wait(3)  # need to wait for the page to load to follow Sessions link
+    driver.implicitly_wait(5)  # need to wait for the page to load to follow Sessions link
 
     # Login
     driver = login(driver, username, password)
@@ -101,10 +137,10 @@ def load(username: str, password: str):
 def main():
     username = "dertigersbrein_02@donders.ru.nl"
     password = 'hbs2032'
-    emp_id = 'A02D01'
+    emp_id = 'A02E18'
     driver, sessions_data = load(username, password)
 
-    _download(driver, sessions_data, emp_id)
+    _download_loop(driver, sessions_data, emp_id)
 
 
     # Finally close driver

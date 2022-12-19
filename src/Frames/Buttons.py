@@ -65,12 +65,13 @@ class ButtonFrame(ttk.Frame):
             # .datx | .pml | .csv
             ap_id = self.parent.controller.data._ap_id
             visit = self.parent.controller.data._visit
+            pep_id = self.parent.controller.data._pep_id
             for ii, file in enumerate(os.scandir(f'S:\hbs\sub-{pep_id}\pre-{visit}\wrb')):
                 if '.datx' in file.name:
                     os.rename(file.path, f'S:\hbs\sub-{pep_id}\pre-{visit}\wrb\sub-{ap_id}_pre_{visit}_wrb_apl.datx')
                 elif '.pml' in file.name:
                     os.rename(file.path, f'S:\hbs\sub-{pep_id}\pre-{visit}\wrb\sub-{ap_id}_pre_{visit}_wrb_apl.pml')
-                elif '.csv' in file.name and str(ap_id) in file.name:
+                elif '.csv' in file.name and str(ap_id)[5:] in file.name:
                     os.rename(file.path, f'S:\hbs\sub-{pep_id}\pre-{visit}\wrb\sub-{ap_id}_pre_{visit}_wrb_apl-evs.csv')
 
         ttk.Button(self, text='ActPal', command = rename).grid(column=0, row=4, sticky=tk.W)
